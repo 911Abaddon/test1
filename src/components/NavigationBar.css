@@ -1,0 +1,103 @@
+
+.glass-nav {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 1.5rem;
+  padding: 10px 30px; /* Adjust padding to match the height you want */
+  max-width: 72rem; /* Max width for large screens */
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem; /* Border radius for the container */
+  color: white;
+  min-height: 50px; 
+  overflow: hidden;
+}
+
+/* Adjustments for medium devices and up */
+@media (min-width: 768px) {
+  .glass-nav {
+    top: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    border-radius: 2rem; /* Larger border-radius for medium screens */
+  }
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 8px 16px; /* Adjust link padding to match your design */
+  overflow: hidden;
+  display: inline-block; /* Allows transform to apply */
+  border-radius: 0.5rem; /* Rounded corners for links */
+  transition: color 0.3s ease, transform 0.2s ease; /* Include transform in transition */
+}
+
+.nav-links a:hover {
+  color: #e0e0e0; /* Color when link is hovered */
+  background-color: rgba(255, 255, 255, 0.1); /* Background color when link is hovered */
+  transform: scale(1.05); /* Enlarge on hover */
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.sign-in,
+.try-free {
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 8px 20px; /* Padding for buttons */
+  border-radius: 20px; /* Rounded corners for buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, #667eea 40%, #764ba2);
+  color: white;
+}
+
+.sign-in {
+  color: white;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sign-in:hover {
+  transform: scale(1.05); 
+  background-color: rgba(255, 255, 255, 0.2); /* Color when sign-in is hovered */
+}
+
+.try-free {
+  background: linear-gradient(to right, #4e54c8, #8f94fb); /* Gradient background for the try free button */
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Ensure smooth background transition */
+}
+
+.try-free:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+  background: linear-gradient(to right, #656ded, #a3b1f7); /* Adjusted gradient for hover */
+}
+.try-free:active {
+  transform: scale(0.95); /* Shrink on click */
+}
+
+.sign-in:active {
+  transform: scale(0.95); /* Shrink on click */
+}

@@ -1,0 +1,73 @@
+.Background {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(7, 7, 8);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); /* Adjust automatically but not less than 75px */
+    gap: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  
+  .square {
+    width: 75px;
+    height: 75px;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    background: rgba(255, 255, 255, 0.02);
+    transition: background-color 0.3s ease, opacity 0.5s linear;
+    pointer-events: auto;
+  }
+  
+  
+  
+  
+  .square.trail {
+    opacity: 0;
+  }
+  
+  .square {
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: background-color 0.3s ease, opacity 0.5s linear;
+    pointer-events: auto;
+  }
+  
+  .square:hover {
+    background: rgba(129, 140, 248, 0.5);
+    transition: background-color 0.3s ease;
+  }
+  
+  .square:not(:hover) {
+    transition-delay: 0.3s;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  .hero {
+    z-index: 10;
+    position: relative;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto; /* Allow hover events to propagate to the squares */
+  }
+  
+  .hero-content:hover .square {
+    background: rgba(129, 140, 248, 0.5);
+    transition: background-color 0.3s ease;
+  }
+  
