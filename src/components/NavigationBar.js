@@ -5,15 +5,15 @@ const NavigationBar = () => {
   return (
     <nav className="glass-nav">
         <div className="nav-links">
-        <a href="#">Products</a>
-        <a href="#">History</a>
+        <a href="#">Product</a>
+        <a href="#">Price</a>
+        <a href="#">About</a>
         <a href="#">Contact</a>
       </div>
 
-      <div className="nav-logo">logo.</div>
+      <div className="nav-logo">Heroniq</div>
       <div className="nav-actions">
-        <a href="#" className="sign-in">Sign in</a>
-        <button className="try-free">Try free</button>
+        <button className="try-free">Sign in</button>
       </div>
     </nav>
   );
