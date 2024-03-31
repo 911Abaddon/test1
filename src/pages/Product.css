@@ -1,0 +1,73 @@
+/* Product title and description adjustments */
+.product-content h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center; /* Centers the text horizontally */
+  width: 500px; /* Fixed width for the title */
+  margin-left: auto; /* Center the title block horizontally */
+  margin-right: auto; /* Center the title block horizontally */
+}
+
+.product-content p {
+  color: white;
+  line-height: 1.6;
+  text-align: justify; /* Justifies the text for a neat appearance */
+  margin-bottom: 15px; /* Space below paragraphs */
+  width: 500px;
+  text-align: center;
+}
+
+/* Subscription form styling */
+.subscription-form {
+  display: flex; /* Aligns children (input and button) inline */
+  justify-content: center; /* Centers the items horizontally within the form */
+  align-items: center; /* Aligns the items vertically at their center */
+  gap: 10px; /* Adds space between the input and button */
+}
+
+.subscription-form input[type="email"] {
+  flex-grow: 1; /* Allows the input to grow and fill available space */
+  width: auto; /* Auto-adjusts width based on content and available space */
+  max-width: 300px; /* Maximum width for the email input */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Space below the input, useful if the form wraps */
+}
+
+.subscription-form button {
+  flex-grow: 1; /* Allows the button to grow and fill available space, with limits due to max-width */
+  width: auto; /* Auto-adjusts width based on content */
+  max-width: 150px; /* Maximum width for the button */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Ensures the button is treated as a block-level element */
+  margin: 0 auto; /* Centers the button if it's not growing to fill space */
+  margin-bottom: 10px;
+}
+
+.subscription-form button:hover {
+  background-color: #0056b3; /* Darkens the button on hover for visual feedback */
+}
+
+/* Adjust the container and product-section backgrounds to be transparent */
+.container, .product-section {
+  background-color: transparent;
+  position: fixed; /* Fixes the position relative to the viewport */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Centers the section both horizontally and vertically */
+}
+
+.product-content {
+  margin: 0 auto; /* Centers the content horizontally within its parent */
+  padding: 20px;
+  border-radius: 10px; /* Rounds the corners of the content area */
+}
