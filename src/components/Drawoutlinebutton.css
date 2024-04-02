@@ -1,0 +1,82 @@
+.draw-outline-button {
+    position: relative;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .draw-outline-button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .draw-outline-button .line {
+    position: absolute;
+    background-color: #00fff2;
+    transition: all 0.3s;
+  }
+  
+  .draw-outline-button .line.top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+  }
+  
+  .draw-outline-button .line.right {
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 0;
+  }
+  
+  .draw-outline-button .line.bottom {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+  }
+  
+  .draw-outline-button .line.left {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+  }
+  
+  .draw-outline-button:hover .line.top {
+    width: 100%;
+  }
+  
+  .draw-outline-button:hover .line.right {
+    height: 100%;
+  }
+  
+  .draw-outline-button:hover .line.bottom {
+    width: 100%;
+  }
+  
+  .draw-outline-button:hover .line.left {
+    height: 100%;
+  }
+  
+  @keyframes pop-in {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .draw-outline-button .pop-in {
+    position: absolute;
+    background-color: #00fff2;
+    border-radius: 50%;
+    animation: pop-in 0.3s ease forwards;
+  }
+  
+  

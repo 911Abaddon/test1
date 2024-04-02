@@ -1,15 +1,14 @@
-// App.js
 import React from 'react';
 import NavigationBar from './components/NavigationBar';
 import Background from './components/Background';
-import HomePage from './pages/Homepage';
+import Homepage from './pages/Homepage'; // Import the Homepage component
 
 function App() {
   return (
     <div className="App">
       <Background />
       <NavigationBar />
-      <HomePage />
+      <Homepage /> {/* Render the Homepage component */}
     </div>
   );
 }

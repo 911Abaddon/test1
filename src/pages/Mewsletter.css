@@ -1,0 +1,92 @@
+/* Styling for the newsletter container */
+.newsletter-container {
+  width: 500px; /* Sets the width of the container */
+  height: auto; /* Sets the height of the container */
+  margin: 170px auto; /* Centers the container vertically and horizontally */
+  background-color: transparent; /* Sets the background color of the container */
+  border-radius: 10px; /* Rounds the corners of the container */
+  padding: 0px; /* Adds padding inside the container */
+  
+}
+
+/* Styling for the content within the newsletter container */
+.newsletter-content {
+  text-align: center; /* Centers the content horizontally */
+}
+
+/* Styling for the title within the newsletter */
+.newsletter-content h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #66fcf1;
+  text-align: center; /* Centers the text horizontally */
+  width: 500px; /* Fixed width for the title */
+  margin-left: auto; /* Center the title block horizontally */
+  margin-right: auto; /* Center the title block horizontally */
+}
+
+/* Styling for the paragraph within the newsletter */
+.newsletter-content p {
+  color: #c5c6c7;
+  line-height: 1.6;
+  text-align: justify; /* Justifies the text for a neat appearance */
+  margin-bottom: 15px; /* Space below paragraphs */
+  width: 500px;
+  text-align: center; /* Adds space below the paragraph */
+}
+
+/* Styling for the subscription form */
+.subscription-form {
+  display: flex; /* Aligns children (input and button) inline */
+  justify-content: center; /* Centers the items horizontally within the form */
+  align-items: center; /* Aligns the items at their baseline */
+  gap: 10px; /* Adds space between the input and button */
+}
+
+/* Styling for the email input field within the subscription form */
+.subscription-form input[type="email"] {
+  flex-grow: 1; /* Allows the input to grow and fill available space */
+  width: auto; /* Auto-adjusts width based on content and available space */
+  max-width: 300px; /* Maximum width for the email input */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Space below the input, useful if the form wraps */
+}
+
+/* Styling for the subscribe button within the subscription form */
+.subscription-form button {
+  flex-grow: 1;
+  width: auto;
+  max-width: 150px;
+  background-color: #1f2833; /* Inside color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  
+}
+
+.subscription-form button:active  {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Styling for the subscribe button on hover 45a29e */
+

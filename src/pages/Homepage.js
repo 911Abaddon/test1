@@ -1,13 +1,23 @@
+// Homepage.js
 import React from 'react';
+import './Homepage.css';
+import Mewsletter from './Mewsletter';
 import Product from './Product';
-import useExternalScript from '../utils/useExternalScript'; // Adjust the import path
+import ProductFeat from './ProductFeat';
 
-const HomePage = () => {
-//  useExternalScript("https://olympianstorage.blob.core.windows.net/olympian-container/loader.js");
 
+
+
+const Homepage = () => {
   return (
-    <Product />
+    <div className="homepage-container">
+      <Mewsletter />
+      <Product />
+      <ProductFeat />
+    </div>
   );
 };
 
-export default HomePage;
+
+
+export default Homepage;
