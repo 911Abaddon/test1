@@ -47,6 +47,7 @@
   display: inline-block; /* Allows transform to apply */
   border-radius: 0.5rem; /* Rounded corners for links */
   transition: color 0.3s ease, transform 0.2s ease; /* Include transform in transition */
+  font-size: 15px;
 }
 
 .nav-links a:hover {

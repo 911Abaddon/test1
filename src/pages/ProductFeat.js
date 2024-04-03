@@ -1,58 +1,70 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './ProductFeat.css';
 
 const ProductFeat = () => {
-  const [scrollItems, setScrollItems] = useState([]);
-  const scrollContainerRef = useRef(null);
-
-  const handleScroll = () => {
-    const containerRect = scrollContainerRef.current.getBoundingClientRect();
-    const newScrollItems = Array.from(scrollContainerRef.current.children).map((child) => {
-      const rect = child.getBoundingClientRect();
-      const visibleAmount = Math.min(containerRect.bottom, rect.bottom) - Math.max(containerRect.top, rect.top);
-      const visibleRatio = visibleAmount / rect.height;
-      const opacity = Math.max(Math.min(visibleRatio, 1), 0.3); // Ensures a minimum opacity
-      const scale = opacity; // Simple linear relationship between opacity and scale
-      return { opacity, scale };
-    });
-    setScrollItems(newScrollItems);
-  };
+  const cardsRef = useRef(null);
 
   useEffect(() => {
-    const container = scrollContainerRef.current;
-    container.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initialize on first mount
+    const cards = cardsRef.current.querySelectorAll('.card');
+    const numCards = cards.length;
 
-    return () => {
-      container.removeEventListener('scroll', handleScroll);
-    };
+    cards.forEach((card, index) => {
+      const cardContent = card.querySelector('.card__content');
+
+      card.style.setProperty('--index', index + 1);
+
+      cardContent.style.setProperty('--index', index + 1);
+      cardContent.style.setProperty('--numcards', numCards);
+      cardContent.style.setProperty('--start-range', `${(index / numCards) * 100}%`);
+      cardContent.style.setProperty('--end-range', `${((index + 1) / numCards) * 100}%`);
+    });
   }, []);
 
   return (
-    <div className="product-feat">
-    <div className="left-side">
-      <h1 className="title">Learn and grow with Lorem Ipsum Dolor</h1>
-      <p className="description">
-        Lorem ipsum dolor sit amet consectetur. Dolor quis a leo lobortis orci tortor eget. Enim proin aliquam nulla a lacus pellentesque quam in. Nec vel nulla nunc vel in molestie proin convallis. Leo et vulputate tincidunt justo a varius et elementum.
-      </p>
-      <button className="button">LOREM IPSUM DOLOR</button>
-    </div>
-    <div className="right-side">
-        <div className="scroll-container" ref={scrollContainerRef}>
-          {[...Array(7)].map((_, index) => (
-            <div
-              key={index}
-              className="scroll-item"
-              style={{
-                opacity: scrollItems[index]?.opacity ?? 1,
-                transform: `scale(${scrollItems[index]?.scale ?? 1})`
-              }}
-            >
-              Feature demo here {index + 1}
-            </div>
-          ))}
+    <div className='homepage-container'>
+      <header>
+        <div>
+         
         </div>
-      </div>
+      </header>
+      <main>
+        <ul id="cards" ref={cardsRef}>
+          <li className="card" id="card_1">
+            <div className="card__content">
+              <div>
+                <h2>Card One</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna vel feugiat varius, nisi risus pharetra quam, at varius velit sapien id tellus.</p>
+                <p>Nullam at elit vel arcu rutrum bibendum. Sed eget sapien sed nisi elementum convallis. Sed venenatis, nisi at scelerisque sollicitudin, quam velit tincidunt nulla, in pulvinar nunc mauris vel ipsum.</p>
+              </div>
+              <figure>
+                <img src="https://via.placeholder.com/400x300" alt="Card One" />
+              </figure>
+            </div>
+          </li>
+          <li className="card" id="card_2">
+            <div className="card__content">
+              <div>
+                <h2>Card Two</h2>
+                <p>Proin sed nisi ac dolor bibendum euismod. Sed ullamcorper, nunc eget ultrices laoreet, mauris mauris ultrices elit, eget fermentum est nisi in risus.</p>
+                <p>Fusce ut arcu vel velit placerat tincidunt. Sed at nulla vel orci posuere varius. Curabitur ut urna non lectus feugiat vehicula.</p>
+              </div>
+              <figure>
+                <img src="https://via.placeholder.com/400x300" alt="Card Two" />
+              </figure>
+            </div>
+          </li>
+          {/* Add more card components as needed */}
+        </ul>
+      </main>
+      <aside>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna vel feugiat varius, nisi risus pharetra quam, at varius velit sapien id tellus. Nullam at elit vel arcu rutrum bibendum. Sed eget sapien sed nisi elementum convallis. Sed venenatis, nisi at scelerisque sollicitudin, quam velit tincidunt nulla, in pulvinar nunc mauris vel ipsum.</p>
+
+        <p>Proin sed nisi ac dolor bibendum euismod. Sed ullamcorper, nunc eget ultrices laoreet, mauris mauris ultrices elit, eget fermentum est nisi in risus. Fusce ut arcu vel velit placerat tincidunt. Sed at nulla vel orci posuere varius. Curabitur ut urna non lectus feugiat vehicula.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna vel feugiat varius, nisi risus pharetra quam, at varius velit sapien id tellus. Nullam at elit vel arcu rutrum bibendum. Sed eget sapien sed nisi elementum convallis. Sed venenatis, nisi at scelerisque sollicitudin, quam velit tincidunt nulla, in pulvinar nunc mauris vel ipsum.</p>
+
+        <p>Proin sed nisi ac dolor bibendum euismod. Sed ullamcorper, nunc eget ultrices laoreet, mauris mauris ultrices elit, eget fermentum est nisi in risus. Fusce ut arcu vel velit placerat tincidunt. Sed at nulla vel orci posuere varius. Curabitur ut urna non lectus feugiat vehicula.</p>
+      </aside>
     </div>
   );
 };

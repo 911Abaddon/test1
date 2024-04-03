@@ -20,7 +20,7 @@
     position: relative; /* Relative positioning */
     cursor: pointer; /* Pointer cursor on hover */
     transition: transform 0.3s ease; /* Smooth transition for interactive states */
-    font-size: 0.95em;
+    font-size: 18px;
     line-height: 1.8; 
     width: 90px;
     text-align: center;

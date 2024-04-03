@@ -1,43 +1,32 @@
-.App {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  
-  .features {
-    padding: 20px;
-  }
-  
-  .features ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .features li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .features li:last-child {
-    border-bottom: none;
-  }
-  
-  .icon-container {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .text-container {
-    flex-grow: 1;
-  }
-  
-  .feature-title {
-    margin: 0;
-    color: #333;
-  }
+.scroll-container {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  margin: auto 70%;
+  width: 300px;
+  background: #0b03f2; /* The background color for the scroll container */
+}
+
+.scroll-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* Animation keyframes not needed since we're using requestAnimationFrame */
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 20px;
+  /* Adjust below if your feature item needs specific height */
+  height: 100px; /* Height must be the same as the container for a single item */
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd; /* For visual separation between items, if desired */
+}
+
+.feature-text {
+  font-size: 16px;
+  /* Add any additional text styling according to your preference */
+}
