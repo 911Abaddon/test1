@@ -1,32 +1,81 @@
-.scroll-container {
+/* The overall container of the addon section */
+.addon-section {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(345deg, #00ccff 0%, #0099ff 100%);
+  border-radius: 16px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 1px 0px inset, rgba(0, 204, 255, 0.35) 0px 15px 100px 0px;
+  padding: 20px;
+  color: white;
+  gap: 20px; /* Adjust space between content and list */
+  max-width: 600px; /* Adjust the width as necessary */
   height: 100px;
-  overflow: hidden;
-  position: relative;
-  margin: auto 70%;
-  width: 300px;
-  background: #0b03f2; /* The background color for the scroll container */
+  margin: 0 auto;
+  overflow: hidden; /* Ensure the children don't cause scrollbars */
 }
 
-.scroll-content {
-  position: absolute;
-  top: 0;
+/* Content container on the left */
+.addon-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Title of the addon section */
+.addon-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Learn more button */
+.learn-more-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.learn-more-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Container for the auto-scrolling list on the right */
+.addons-list-container {
+  flex: 1;
+  overflow: hidden; /* Hide the scrollbar */
+  position: relative; /* Establish positioning context */
+  max-height: 150px; /* Adjust height as necessary */
+}
+
+/* List of addons */
+.addons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute; /* Absolute positioning to move during animation */
   width: 100%;
-  /* Animation keyframes not needed since we're using requestAnimationFrame */
 }
 
-.feature-item {
+/* Individual addon items */
+.addon-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+  padding: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  padding: 20px;
-  /* Adjust below if your feature item needs specific height */
-  height: 100px; /* Height must be the same as the container for a single item */
+  height: 40px; /* Adjust to match content size */
   box-sizing: border-box;
-  border-bottom: 1px solid #ddd; /* For visual separation between items, if desired */
 }
 
-.feature-text {
-  font-size: 16px;
-  /* Add any additional text styling according to your preference */
+.addon-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }

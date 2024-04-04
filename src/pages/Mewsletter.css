@@ -2,11 +2,10 @@
 .newsletter-container {
   width: 500px; /* Sets the width of the container */
   height: auto; /* Sets the height of the container */
-  margin: 170px auto; /* Centers the container vertically and horizontally */
+  margin: 50px auto; /* Centers the container vertically and horizontally */
   background-color: transparent; /* Sets the background color of the container */
   border-radius: 10px; /* Rounds the corners of the container */
   padding: 0px; /* Adds padding inside the container */
-  
 }
 
 /* Styling for the content within the newsletter container */
@@ -69,7 +68,6 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 10px;
-  
 }
 
 .subscription-form button:active  {
@@ -89,4 +87,3 @@
 }
 
 /* Styling for the subscribe button on hover 45a29e */
-

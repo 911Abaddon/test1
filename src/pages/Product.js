@@ -1,4 +1,3 @@
-// ScrollingFeatures.js
 import React, { useEffect, useRef } from 'react';
 import './Product.css';
 
@@ -22,26 +21,19 @@ const Product = () => {
   useEffect(() => {
     const scrollElement = scrollRef.current;
     let animationFrameId;
-    
-    // We use requestAnimationFrame for smooth animations
-    const animate = () => {
-      // Add your scroll amount
-      scrollElement.scrollTop += 1;
 
-      // If we've scrolled past the first half, reset to start
-      if (scrollElement.scrollTop >= scrollElement.scrollHeight / 2) {
+    const animate = () => {
+      if (scrollElement.scrollTop < scrollElement.scrollHeight - scrollElement.clientHeight) {
+        scrollElement.scrollTop += 1;
+      } else {
         scrollElement.scrollTop = 0;
       }
 
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    startAnimation();
-
     // Start the animation loop
-    function startAnimation() {
-      animationFrameId = requestAnimationFrame(animate);
-    }
+    animationFrameId = requestAnimationFrame(animate);
 
     // Clean up the animation frame upon component dismount
     return () => {
@@ -50,12 +42,18 @@ const Product = () => {
   }, []);
 
   return (
-    <div className="scroll-container" ref={scrollRef}>
-      {features.map((feature, index) => (
-        <div key={index} className="feature-item">
-          <div className="feature-text">{feature}</div>
-        </div>
-      ))}
+    <div className="addon-section">
+      <div className="addon-content">
+        <div className="addon-title">Add-ons are powerful upgrades for your pro site.</div>
+        <button className="learn-more-button">Learn more</button>
+      </div>
+      <div className="addons-list-container" ref={scrollRef}>
+        <ul className="addons-list">
+          {features.map((feature, index) => (
+            <li key={index} className="addon-item">{feature}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

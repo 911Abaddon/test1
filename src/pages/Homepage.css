@@ -1,6 +1,9 @@
 .homepage-container {
-    height: 0px;
-    margin: 0 auto; /* Center it if there's a max-width */
-    /* Add any other styles you want for this container */
-  }
-  
+  height: 0px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.homepage-aside {
+  margin-top: 2rem; /* Add some top margin for spacing */
+}
