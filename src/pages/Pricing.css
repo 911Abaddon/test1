@@ -1,0 +1,187 @@
+.pricing-table {
+    display: flex;
+    flex-wrap: wrap; /* If you want them to wrap on smaller screens */
+    gap: 32px; /* Adjust this value to control the spacing */
+    justify-content: center; /* This will center the cards if there's extra space */
+    background-color: transparent;
+
+  }
+  
+  .pricing-card {
+    width: 250px; /* Adjust to use a fixed width or percentage as necessary */
+    background-color: #fff;
+    border-radius: 12px; /* 'rounded-xl' typically is around 12px */
+    border: 1px solid #e2e8f0; /* 'border-slate-300' */
+    padding: 24px; /* 'p-6' */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust as necessary */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+  }
+  
+  
+  .pricing-header h1 {
+    font-size: 2rem; /* Example size */
+    color: #333; /* Example color */
+    text-align: center; /* Center align text */
+    font-family: 'Arial', sans-serif; /* Specifying font */
+    margin: auto;
+    width: 600px;
+  }
+  
+  
+  
+  .pricing-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .pricing-card h1,
+  .pricing-card h2,
+  .pricing-card h3,
+  .pricing-card p {
+    text-align: left; /* Aligns text to the left */
+    font-family: Arial, sans-serif;
+  }
+  
+  .pricing-card.active .price {
+    color: #7C3AED; /* Blue color for the price when active */
+  }
+  
+  .pricing-card .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-card h1 { /* Assuming h1 is for the main price */
+    font-size: 60px; /* 3.75rem equivalent for text-6xl */
+    font-weight: bold;
+  }
+  
+  .pricing-card h2 { /* Assuming h2 is for the plan name */
+    font-size: 24px; /* 1.5rem equivalent for text-2xl */
+    font-weight: bold;
+  }
+  
+  .pricing-card h3 {
+    font-weight: 600; /* Adjust as necessary */
+    color: #ff0000; /* The color you want */
+    /* ... other styles ... */
+  }
+  
+  .pricing-card p { /* For other descriptive texts */
+    font-size: 18px; /* 1.125rem equivalent for text-lg */
+  }
+  
+  .pricing-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-card li {
+    padding: 5px 0;
+    text-align: left;
+  }
+  
+  .pricing-card li:not(.price)::before {
+    content: '✔'; /* You can also use a custom image or icon */
+    color: #000000; /* The color you want */
+    margin-right: 8px; /* Adjust spacing as necessary */
+  }
+  
+  .pricing-card .price {
+    font-size: 2rem; /* Adjust the size as needed */
+    color: #333; /* Default color */
+    text-align: left;
+  }
+  
+  .pricing-card button {
+    background-color: black; /* Use the color of your choice */
+    color: white;
+    border: none;
+    border-radius: 12px; /* 'rounded-lg' */
+    padding: 12px 24px; /* Adjust to match the example */
+    font-weight: 600; /* 'font-semibold' */
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center
+  }
+  
+  /*
+  .pricing-card button:hover {
+    background-color: #18aa18; /* Change Button Color when hovered 
+  } */
+  
+  .pricing-card.active button {
+    background-color: #7C3AED; /* Adjust if you want a different active state color */
+    color: #ffffff; /* Ensure text visibility */
+  }
+  
+  .pricing-header {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 1000px;
+    margin: auto;
+ 
+  }
+  
+  .pricing-header h3 {
+    font-weight: 600; /* font-semibold */
+    font-size: 3.25rem; /* text-5xl equivalent, adjust as necessary */
+    text-align: center; /* text-center */
+    margin-bottom: 1.5rem; /* mb-6, assuming 1rem = 4 units in your setup */
+  }
+  
+  /* For larger screens, you might want to increase the font size, similar to lg:text-7xl */
+  @media (min-width: 1024px) { /* This assumes 'lg' breakpoint is at 1024px */
+    .pricing-header h3 {
+      font-size: 4.5rem; /* Adjust to match lg:text-7xl exactly as needed */
+    }
+  }
+  
+  
+  
+  .billing-cycle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .billing-cycle-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #ffffff; /* Default non-selected background */
+    color: #000000;
+  }
+  
+  
+  .save-label {
+    background-color: #ff0000; /* Add desired color */
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    /* Position it as per your design, assuming top-right of the annual button */
+  }
+  
+  /* PricingTier.css */
+  
+  .pricing-table-container {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    background-color: transparent;
+    width: 1000px;
+    margin-top: 10%;
+  }
+  
+
+  

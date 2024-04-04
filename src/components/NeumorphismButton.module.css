@@ -1,0 +1,21 @@
+/* NeumorphismButton.module.css */
+
+.buttonBase {
+    padding: 10px 20px;
+    border-radius: 9999px; /* Fully rounded */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #F8FAFC; /* Light grey background */
+    color: #060606; /* Dark grey text */
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  .buttonBase:hover, .buttonBase.active {
+    color: #7C3AED; /* Violet text on hover and active */
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.6), 1px 1px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 1), inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  

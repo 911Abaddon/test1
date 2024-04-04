@@ -5,6 +5,7 @@ import Mewsletter from './Mewsletter';
 import Product from './Product';
 import ProductFeat from './ProductFeat';
 import FeatureCard from './FeatureCard';
+import Pricing from './Pricing';
 
 const Homepage = () => {
   return (
@@ -12,6 +13,7 @@ const Homepage = () => {
       <Mewsletter />
       <ProductFeat />
       <FeatureCard />
+      <Pricing />
       <Product />
 
     </div>
