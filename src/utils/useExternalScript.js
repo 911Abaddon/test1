@@ -1,4 +1,5 @@
-/* import { useEffect } from 'react';
+// useExternalScript.js
+import { useEffect } from 'react';
 
 const useExternalScript = (src) => {
   useEffect(() => {
@@ -14,6 +15,4 @@ const useExternalScript = (src) => {
   }, [src]);
 };
 
-export default useExternalScript; // Ensure that the hook is exported
-
-*/
+export default useExternalScript;
