@@ -2,81 +2,97 @@ import React, { useState } from 'react';
 import './Pricing.css'; // Make sure this path is correct to include your CSS
 import NeumorphismButton from '../components/NeumorphismButton';
 
-
 const Pricing = () => {
+  const [selectedProduct, setSelectedProduct] = useState('AI Chatbot'); // Default selection set to AI Chatbot
   const [selectedPlan, setSelectedPlan] = useState(null);
-  const [billingCycle, setBillingCycle] = useState('Monthly');
+  
+  const handleProductSelect = (product) => {
+    setSelectedProduct(product);
+    setSelectedPlan(null); // Reset selected plan when switching products
+  };
 
   const handlePlanSelect = (plan) => {
     setSelectedPlan(plan);
-  };
-
-  const handleBillingCycleChange = (cycle) => {
-    setBillingCycle(cycle);
   };
 
   return (
     <div className="pricing-table-container">
       <div className="ping"></div> {/* Add the ping element */}
       <div className="pricing-header">
-        <h1>Choose the plan that’s right for you</h1>
-        <div className="billing-cycle-buttons">
+        <h1>Choose the product and plan that’s right for you</h1>
+        <div className="product-buttons">
           <NeumorphismButton 
-            isActive={billingCycle === 'Monthly'} 
-            onClick={() => handleBillingCycleChange('Monthly')}>
-            Monthly
+            isActive={selectedProduct === 'Instagram Bot'} 
+            onClick={() => handleProductSelect('Instagram Bot')}>
+            Instagram Bot
           </NeumorphismButton>
           <NeumorphismButton 
-            isActive={billingCycle === 'Annual'} 
-            onClick={() => handleBillingCycleChange('Annual')}>
-            Annual
+            isActive={selectedProduct === 'AI Chatbot'} 
+            onClick={() => handleProductSelect('AI Chatbot')}>
+            AI Chatbot
           </NeumorphismButton>
         </div>
       </div>
-      <div className="pricing-table">
-        <PricingCard
-          title="Free"
-          price="$0/month"
-          description="Everything to start"
-          features={[
-            '10,000 requests/month',
-            'Basic in app support',
-            '2 users on your account',
-            '1 workspace',
-          ]}
-          buttonText="SIGN UP FREE"
-          active={selectedPlan === 'Free'}
-          onPlanSelect={() => handlePlanSelect('Free')}
-        />
-        <PricingCard
-          title="Professional"
-          price="$49/month"
-          description="Everything to launch"
-          features={[
-            '100,000 requests/month',
-            'Email in app support',
-            '10 users on your account',
-            '10 work spaces',
-          ]}
-          buttonText="SIGN UP PROFESSIONAL"
-          active={selectedPlan === 'Professional'}
-          onPlanSelect={() => handlePlanSelect('Professional')}
-        />
-        <PricingCard
-          title="Enterprise"
-          price="$499/month"
-          description="Everything to go public"
-          features={[
-            '10,000,000 requests/month',
-            'Phone support',
-            'Unlimited users on your account',
-            'Unlimited work spaces',
-          ]}
-          buttonText="SIGN UP ENTERPRISE"
-          active={selectedPlan === 'Enterprise'}
-          onPlanSelect={() => handlePlanSelect('Enterprise')}
-        />
-      </div>
+      {selectedProduct === 'Instagram Bot' && (
+        <div className="pricing-table">
+          <PricingCard
+            title="Basic Plan"
+            price="€40/month"
+            description="Basic features for Instagram Bot"
+            features={[
+              'Basic feature 1',
+              'Basic feature 2',
+              'Basic feature 3',
+            ]}
+            buttonText="BUY NOW"
+            active={selectedPlan === 'Basic Plan'}
+            onPlanSelect={() => handlePlanSelect('Basic Plan')}
+          />
+        </div>
+      )}
+      {selectedProduct === 'AI Chatbot' && (
+        <div className="pricing-table">
+          <PricingCard
+            title="Basic Plan"
+            price="€25/month"
+            description="Basic features for AI Chatbot"
+            features={[
+              'Basic feature 1',
+              'Basic feature 2',
+              'Basic feature 3',
+            ]}
+            buttonText="BUY NOW"
+            active={selectedPlan === 'Basic Plan'}
+            onPlanSelect={() => handlePlanSelect('Basic Plan')}
+          />
+          <PricingCard
+            title="Professional Plan"
+            price="€50/month"
+            description="Professional features for AI Chatbot"
+            features={[
+              'Professional feature 1',
+              'Professional feature 2',
+              'Professional feature 3',
+            ]}
+            buttonText="BUY NOW"
+            active={selectedPlan === 'Professional Plan'}
+            onPlanSelect={() => handlePlanSelect('Professional Plan')}
+          />
+          <PricingCard
+            title="Enterprise Plan"
+            price="€100/month"
+            description="Enterprise features for AI Chatbot"
+            features={[
+              'Enterprise feature 1',
+              'Enterprise feature 2',
+              'Enterprise feature 3',
+            ]}
+            buttonText="BUY NOW"
+            active={selectedPlan === 'Enterprise Plan'}
+            onPlanSelect={() => handlePlanSelect('Enterprise Plan')}
+          />
+        </div>
+      )}
     </div>
   );
 };

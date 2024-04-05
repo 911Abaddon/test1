@@ -27,6 +27,7 @@
     font-family: 'Arial', sans-serif; /* Specifying font */
     margin: auto;
     width: 600px;
+    margin-bottom: 3%;
   }
   
   
@@ -183,5 +184,11 @@
     margin-top: 10%;
   }
   
+.product-buttons {
 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
   

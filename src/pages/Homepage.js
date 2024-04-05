@@ -14,8 +14,9 @@ const Homepage = () => {
       <ProductFeat />
       <FeatureCard />
       <Pricing />
-      <Product />
-
+      <div className="product-container">
+        <Product />
+      </div>
     </div>
   );
 };

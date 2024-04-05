@@ -12,6 +12,7 @@
   height: 100px;
   margin: 0 auto;
   overflow: hidden; /* Ensure the children don't cause scrollbars */
+  margin-top: 5%;
 }
 
 /* Content container on the left */
