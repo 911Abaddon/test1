@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import './App.css';
 import NavigationBar from './components/NavigationBar';
 import Background from './components/Background';
 import Homepage from './pages/Homepage';
+
 import useExternalScript from './utils/useExternalScript'; // Import the useExternalScript hook
 
 function App() {

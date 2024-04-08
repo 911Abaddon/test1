@@ -1,0 +1,41 @@
+.heroniq-about-us {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    display: flex; /* Make the container a flex container */
+    flex-direction: column; /* Stack the children vertically */
+    align-items: center; /* Center-align the flex items (children) horizontally */
+    justify-content: center; /* Center content vertically if you want */
+    height: 0px;
+  }
+  
+  .heroniq-about-us h1 {
+    text-align: center;
+    color: #66fcf1; /* Feel free to change this color to match your branding */
+  }
+  
+  .heroniq-about-us p {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #c5c6c7;
+  }
+  
+  .learn-more-button2 {
+    background-color: #007bff; /* Adjust button color to match your branding */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    /* Remove align-self as it's no longer necessary */
+  }
+  
+  .learn-more-button2:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+  }
+  

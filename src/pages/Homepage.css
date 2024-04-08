@@ -9,5 +9,12 @@
 }
 /* Homepage.css */
 .product-container {
-  margin-top: 10%;
+  margin-top: 8%;
+}
+
+.About-container {
+  margin-top: 20%;
+}
+.Contact-container {
+  margin-top: 25%;
 }

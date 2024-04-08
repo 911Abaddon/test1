@@ -1,0 +1,139 @@
+/* Container and Global Layout Styles */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Ensures items are spaced out evenly */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 2rem; /* Space between items */
+    position: relative;
+    box-sizing: border-box; /* Ensures padding and borders are included in total width */
+  }
+  
+  /* Unified Styles for Left and Right Containers */
+  .contact-left,
+  .contact-right {
+    background-color: rgba(255, 255, 255, 0.95); /* Unified background color */
+    padding: 4rem; /* Unified padding */
+    border-radius: 2rem; /* Unified rounded corners */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); /* Unified shadow */
+    width: calc(50% - 6rem); /* Adjusted width to account for the gap */
+    margin: auto; /* Helps with alignment */
+    box-sizing: border-box; /* Includes padding and border in the element's total width */
+  }
+  
+  /* Typography and Text Styles */
+  .contact-form h2,
+  .contact-form label,
+  .contact-form p,
+  .info-wrap h3,
+  .info-wrap p {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  /* Notification Styles */
+  .notification {
+    font-size: 0.875rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    outline: none;
+  }
+  
+  .notification.success,
+  .notification.error {
+    color: white;
+  }
+  
+  .notification.success {
+    background-color: green;
+  }
+  
+  .notification.error {
+    background-color: red;
+  }
+  
+  /* Form Fields and Buttons */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button,
+  .button-container button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus,
+  .contact-form button:focus,
+  .button-container button:hover {
+    outline: none;
+    box-shadow: 0 0 2px 1px #0077cc;
+  }
+  
+  .button-container button {
+    background-color: #0077cc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-container button:hover {
+    background-color: #0062b5;
+  }
+  
+  /* Layout Adjustments and Spacing */
+  .form-row,
+  .first-name-container,
+  .last-name-container,
+  .input-wrapper,
+  .textarea-wrapper,
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-wrapper,
+  .textarea-wrapper {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Icon and Text Alignment for Contact Information */
+  .dbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .dbox .icon {
+    color: #fff; /* Icons contrast against darker background */
+    margin-right: 0.5rem;
+  }
+  
+  .dbox .text p,
+  .dbox .text p a {
+    margin: 0;
+    color: #aaa; /* Lighter text for readability */
+    text-decoration: none; /* No underline by default */
+  }
+  
+  .dbox .text p a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Responsive Design Adjustments */
+  @media (max-width: 768px) {
+    .contact-left,
+    .contact-right {
+      width: 100%; /* Full width for smaller screens */
+      margin: 0 0 2rem 0; /* Adjust margin for stacking */
+    }
+  }
