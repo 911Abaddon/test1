@@ -26,7 +26,7 @@ const Footer = () => {
           <input type="text" placeholder="Search" />
           <ul className="contact-info">
             <li><i className="fas fa-home"></i> patra, Greece</li>
-            <li><i className="fas fa-envelope"></i> Alex@heroniq.com Send Nudes</li>
+            <li><i className="fas fa-envelope"></i> Alex@heroniq.com </li>
             <li><i className="fas fa-phone"></i> 6971111111</li>
           </ul>
         </div>
