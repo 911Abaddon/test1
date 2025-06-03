@@ -25,9 +25,9 @@ const Footer = () => {
           <h5>Search </h5>
           <input type="text" placeholder="Search" />
           <ul className="contact-info">
-            <li><i className="fas fa-home"></i> </li>
-            <li><i className="fas fa-envelope"></i>  </li>
-            <li><i className="fas fa-phone"></i> </li>
+            <li><i className="fas fa-home"></i> test</li>
+            <li><i className="fas fa-envelope"></i> test </li>
+            <li><i className="fas fa-phone"></i> test </li>
           </ul>
         </div>
         <div className="footer-hours">
